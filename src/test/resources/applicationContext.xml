@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!-- 引入属性文件 -->
+    <context:property-placeholder location="classpath:mybatis.generator.properties" />
+    <!-- 自动扫描 -->
+    <!-- <context:component-scan base-package="*" />-->
+
+    <!--Spring扫描以下包进行IOC操作-->
+    <context:component-scan
+            base-package="its.dev.report.core.model.*,
+                        controller"/>
+    <mvc:annotation-driven />
+    <!--开启注解-->
+    <context:annotation-config/>
+
+    <!--事件监听-->
+
+        <bean id="student" class="TestLisenter.Student" />
+        <bean id="course" class="TestLisenter.Course" />
+        <bean id="studentService" class="TestLisenter.EventC.StudentServiceImpl" />
+
+    <!-- 配置数据源 -->
+    <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="jdbc:mysql://localhost:3306/testactiviti?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+        <property name="initialSize" value="1" />
+        <property name="maxActive" value="20" />
+        <property name="minIdle" value="1" />
+        <property name="maxWait" value="60000" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="testWhileIdle" value="true" />
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="25200000" />
+        <property name="removeAbandoned" value="true" />
+        <property name="removeAbandonedTimeout" value="1800" />
+        <property name="logAbandoned" value="true" />
+        <property name="filters" value="mergeStat" />
+    </bean>
+
+
+    <!-- myBatis文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations" value="classpath:/its/dev/report/core/model/impl/mapper/*Mapper.xml" />
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="its.dev.report.core.model.impl.mapper" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean>
+    <!--<mvc:interceptors>
+        &lt;!&ndash; 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 &ndash;&gt;
+        &lt;!&ndash;<bean class="Intercepter.LoginIntercpter"/>&ndash;&gt;
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            &lt;!&ndash; 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 &ndash;&gt;
+            <bean class="Intercepter.LoginIntercpter"/>
+        </mvc:interceptor>
+    </mvc:interceptors>-->
+    <!-- &lt;!&ndash; 配置事务管理器 &ndash;&gt;
+     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+         <property name="dataSource" ref="dataSource" />
+     </bean>
+
+     &lt;!&ndash; 注解方式配置事物 &ndash;&gt;
+     &lt;!&ndash; <tx:annotation-driven transaction-manager="transactionManager" /> &ndash;&gt;
+
+     &lt;!&ndash; 拦截器方式配置事物 &ndash;&gt;
+     <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+         <tx:attributes>
+             <tx:method name="add*" propagation="REQUIRED" />
+             <tx:method name="modify*" propagation="REQUIRED" />
+             <tx:method name="delete*" propagation="REQUIRED" />
+             <tx:method name="find*" propagation="SUPPORTS" />
+             <tx:method name="query" propagation="SUPPORTS" />
+             <tx:method name="search*" propagation="SUPPORTS" />
+             <tx:method name="*" propagation="SUPPORTS" />
+         </tx:attributes>
+     </tx:advice>
+     <aop:config>
+         <aop:pointcut id="transactionPointcut" expression="execution(* its.dev.report.core.model.*.*(..))" />
+         <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
+     </aop:config>-->
+    <!--&lt;!&ndash; 配置druid监控spring jdbc &ndash;&gt;
+    <bean id="druid-stat-interceptor" class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor">
+    </bean>
+    <bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut" scope="prototype">
+        <property name="patterns">
+            <list>
+                <value>com.dahafo.demo.um.service.impl</value>
+            </list>
+
+        </property>
+    </bean>
+    <aop:config>
+        <aop:advisor advice-ref="druid-stat-interceptor" pointcut-ref="druid-stat-pointcut" />
+    </aop:config>-->
+
+</beans>

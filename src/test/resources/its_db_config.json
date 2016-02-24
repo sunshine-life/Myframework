@@ -1,0 +1,21 @@
+{
+  "activiti.dataSource": {
+    url: "jdbc:mysql://localhost:3306/testactiviti?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true",
+    username: "root",
+    driverClassName: "com.mysql.jdbc.Driver",
+    password: "root",
+    filters: "stat",
+    maxActive: "5",
+    initialSize: "1",
+    maxWait: "60000",
+    minIdle: "1",
+    timeBetweenEvictionRunsMillis: "3000",
+    minEvictableIdleTimeMillis: "300000",
+    validationQuery: "SELECT 'x'",
+    testWhileIdle: "true",
+    testOnBorrow: "false",
+    testOnReturn: "false",
+    poolPreparedStatements: "true",
+    maxPoolPreparedStatementPerConnectionSize: "20"
+  }
+}

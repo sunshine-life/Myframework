@@ -1,0 +1,68 @@
+/* Calendar CSS */
+
+.calendar-bottom {
+    margin-bottom: 10px;
+}
+
+.calendar-ul {
+    border: 1px solid;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style-type: none;
+}
+
+.calendar-ul>li>a{
+    color: #000000 !important;
+}
+
+.calendar{
+    border: 1px solid;
+}
+.calendar-group{
+    padding-top: 5px;
+}
+
+/*.calendar-tools {
+    padding-top: 20px;
+}*/
+.calendar-tools-title {
+    display: inline-block;
+    padding-left: 10px;
+}
+.calendar-tools-button {
+    display: inline-block;
+    float: right;
+    padding-right: 20px;
+    margin-left: 20px;
+}
+
+.calendar-foot {
+    padding: 20px 0;
+}
+.calendar-foot-title {
+    display: inline-block;
+    padding-left: 10px;
+}
+.calendar-foot-button {
+    display: inline-block;
+    float: right;
+    padding-right: 20px;
+    margin-left: 20px;
+}
+
+.calendar-container {
+    padding: 0 20px;
+}
+
+h1 h2 h3 h4 h5 {
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 5px;
+}
+
+td {
+    text-align: center;
+}

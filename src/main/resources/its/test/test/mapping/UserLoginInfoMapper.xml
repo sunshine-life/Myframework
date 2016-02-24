@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="its.fei.test.dao.UserLoginInfoMapper">
+  <resultMap id="BaseResultMap" type="its.fei.test.model.UserLoginInfo">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <id column="username" jdbcType="VARCHAR" property="username" />
+    <result column="logindate" jdbcType="TIMESTAMP" property="logindate" />
+    <result column="loginip" jdbcType="VARCHAR" property="loginip" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    Id, username, logindate, loginip
+  </sql>
+</mapper>

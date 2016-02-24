@@ -1,0 +1,462 @@
+html,body{height: 100%;}
+* {
+    /*font-size: 13px;*/
+    font-family: "Helvetica Neue",helvetica,'lucida grande','lucida sans unicode',lucida,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+}
+/* ---------------------------- nav ---------------------------- */
+.navbar-inverse .navbar-nav>li>a{
+    color:#fff;
+}
+.navbar-inverse .navbar-brand{
+    color:#fff; 
+    font-family: Microsoft YaHei;
+    font-weight: 800;
+    margin-left: 20px !important;}
+/* ---------------------------- layout ---------------------------- */
+#top{
+    margin-top:40px;
+}
+.calendar{
+    border: 0;
+}
+.calendar-container{
+    padding:0;
+}
+.container-fluid .row{
+    margin: 0;
+}
+.col-sm-2 .form-control{
+    width: 100%;
+}
+/* ---------------------------- title ---------------------------- */
+.calendar-tools-title{
+    padding-left:0;
+}
+.calendar-group {
+    padding: 0;
+}
+.calendar-title {
+    padding: 0;
+}
+.calendar-tools-button,.calendar-foot-button{margin: 0;padding: 0;}
+.bigbutton{display: inline-block;float: right;padding: 10px 0 0 0;}
+
+/* ---------------------------- 搜索表单 ---------------------------- */
+
+
+body .form-control {
+    /*padding: 6px 10px;*/
+    /*font-size: 13px;*/
+
+    border-radius: 0;
+    box-shadow: none;
+    color: #333;
+    border-color: #ddd;
+}
+
+body .form-control:focus {
+    border-color: #06D995;
+    box-shadow: none;
+    color: #333;
+}
+body .form-inline {
+    line-height: 25px;
+}
+body .row-fluid {
+   height: 100%;
+}
+body .row-fluid .form-inline {
+    margin: 0;}
+body #bottom .form-inline {
+    padding: 25px 0 15px 0;
+}
+
+body .control-label {
+    color: #888;
+    font-weight: 300;
+}
+body .form-inline #dpd1.form-control {
+    margin-right:5px;}
+#bottom label.control-label {
+    font-size:18px;
+    color: #333 !important;
+    line-height: 1;
+}
+.form-control{width: 90%;}
+/*下拉框*/
+body .select2-container {
+
+}
+body .elect2-container .select2-results__option {
+    /*font-size:13px;*/
+    line-height: 1;
+}
+body .select2-container--classic.select2-container--open .select2-selection--single {
+    border-color: #06D995;
+    background: #F5F5F5;
+}
+body .select2-container--classic .select2-selection--single{
+    background: #fff !important;
+    border-radius: 0;
+    height: 25px;
+    border-color:#ddd;
+}
+body .select2-container--classic .select2-selection--single:focus {
+    border: 1px solid #06D995;
+}
+body .select2-container--classic.select2-container--open.select2-container--below .select2-selection--single {
+    background: #fff;
+}
+body .select2-container--classic .select2-selection--single .select2-selection__rendered {
+    color: #333;
+    line-height: 25px;
+    padding-left: 10px;
+}
+body .select2-container--classic.select2-container--open .select2-dropdown {
+    border-color: #06D995;
+    border:0;
+    background: #F5F5F5;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15), 0px 0px 10px 0px rgba(0,0,0,0.10);
+}
+body .select2-container--classic .select2-results__option--highlighted[aria-selected] {
+    background: #06D995;
+    padding: 8px 20px;
+}
+.datepicker td.active:hover, .datepicker td.active:hover:hover, .datepicker td.active:active, .datepicker td.active:hover:active, .datepicker td.active.active, .datepicker td.active:hover.active, .datepicker td.active.disabled, .datepicker td.active:hover.disabled, .datepicker td.active[disabled], .datepicker td.active:hover[disabled] {
+    background: #fff;
+    border: 1px solid #06D995;
+}
+body .select2-container--classic .select2-selection--single .select2-selection__arrow {
+    border-radius: 0;
+    background: #fff !important;
+    border-left: 0;
+    height: 23px;
+}
+body .select2-container--classic .select2-selection--single .select2-selection__arrow b {
+    border-color: #333 transparent transparent transparent;
+}
+.select2-container--classic .select2-search--dropdown .select2-search__field {
+    border: 1px solid #ddd;
+    /*font-size:13px;*/
+}
+body .select2-results__option {
+    /*font-size:13px;*/
+    line-height: 1;
+    padding: 8px 20px;
+}
+/*body .select2-search--dropdown {
+    padding: 8px 20px;
+}*/
+/*日历*/
+body .datepicker:before, body .datepicker:after {
+    border:0;
+    background:#f5f5f5;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15), 0px 0px 10px 0px rgba(0,0,0,0.10);
+}
+body .datepicker {
+    border-radius: 0;
+    padding: 10px;
+    margin-top: 0;
+}
+body .datepicker td {
+    padding: 4px;
+    line-height:1;
+}
+body th.prev, body th.next {
+    color: #333;
+    font-size: 16px;
+    padding:0;
+}
+body .table-condensed>thead>tr .dow {
+    padding-top: 15px;
+    font-weight: 300;
+    color: #999;
+    font-size: 9px;
+}
+body .dropdown-menu {
+    border: 0;
+    background:#f5f5f5;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15), 0px 0px 10px 0px rgba(0,0,0,0.10);
+}
+.table-condensed>tr {
+    background: transparent;}
+.table-condensed>thead>tr>th {
+    color: #999;
+    font-weight: 300;
+}
+.table-condensed .datepicker-switch {
+    font-size:16px;
+    font-weight:300;
+    color: #333;
+    margin-top: -5px;
+}
+
+.datepicker td, .datepicker th {
+    border-radius: 12px;
+}
+.datepicker td.active, .datepicker td.active:hover  {
+    background-color: #06D995;
+    text-shadow: none;
+    border-radius: 12px;
+}
+td.active:hover, .datepicker td.active:hover:hover, .datepicker td.active:active, .datepicker td.active:hover:active,           .datepicker td.active.active, .datepicker td.active:hover.active, .datepicker td.active.disabled, .datepicker    td.active:hover.disabled, .datepicker td.active[disabled], .datepicker td.active:hover[disabled] {
+    background-color: #06D995;
+    border-radius: 12px;
+}
+.datepicker td.active:active, .datepicker td.active:hover:active, .datepicker td.active.active, .datepicker td.active:hover.active {
+    background-color:#06D995;}
+
+.table>tbody>tr.info>td, .table>tbody>tr.info>th, .table>tbody>tr>td.info, .table>tbody>tr>th.info, .table>tfoot>tr.info>td, .table>tfoot>tr.info>th, .table>tfoot>tr>td.info, .table>tfoot>tr>th.info, .table>thead>tr.info>td, .table>thead>tr.info>th, .table>thead>tr>td.info, .table>thead>tr>th.info {
+    background-color: transparent;
+    padding: 12px 10px;
+    border-top:0;
+}
+
+/* ---------------------------- 表格 ---------------------------- */
+.table>thead>tr>th {
+    border: 0;
+    background: #F1F4F3;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 12px 10px;
+    border-color: transparent;
+    border-top:0;
+}
+.bootgrid-table th > .column-header-anchor > .text {
+    color: #888;
+    font-weight: normal;
+    line-height:1;
+}
+.table-responsive .bootgrid-table td, .table-responsive .bootgrid-table th>.column-header-anchor>.text {
+    line-height:1;
+}
+.table-hover>tbody>tr.success:hover>td, .table-hover>tbody>tr.success:hover>th, .table-hover>tbody>tr:hover>.success, .table-hover>tbody>tr>td.success:hover, .table-hover>tbody>tr>th.success:hover {
+
+    color: #fff;
+    background:#06D995;
+}
+.table-hover>tbody>tr.info:hover>td, .table-hover>tbody>tr.info:hover>th, .table-hover>tbody>tr:hover>.info, .table-hover>tbody>tr>td.info:hover, .table-hover>tbody>tr>th.info:hover {
+
+    color: #fff;
+    background:#06D995;
+}
+.table>tbody>tr.success>td, .table>tbody>tr.success>th, .table>tbody>tr>td.success, .table>tbody>tr>th.success, .table>tfoot>tr.success>td, .table>tfoot>tr.success>th, .table>tfoot>tr>td.success, .table>tfoot>tr>th.success, .table>thead>tr.success>td, .table>thead>tr.success>th, .table>thead>tr>td.success, .table>thead>tr>th.success {
+    background:transparent;
+}
+.table>tbody>tr.info>td, .table>tbody>tr.info>th, .table>tbody>tr>td.info, .table>tbody>tr>th.info, .table>tfoot>tr.info>td, .table>tfoot>tr.info>th, .table>tfoot>tr>td.info, .table>tfoot>tr>th.info, .table>thead>tr.info>td, .table>thead>tr.info>th, .table>thead>tr>td.info, .table>thead>tr>th.info {
+    background: transparent;
+}
+.table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th {
+    padding: 8px;
+}
+.table-responsive {
+    padding:0;
+    border:0;
+}
+.table-striped>tbody>tr {
+    background:#F4F6F5;}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+.table>thead>tr>th {
+    border-bottom: 0;
+}
+.fixed-table-container {border: 0; border-radius: 0;}
+.bootstrap-table .table{border-radius: 0;}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	vertical-align: middle;
+}
+.fixed-table-container tbody .selected td{background: none;}
+table .form-control{width: 100%;text-align: center;}
+
+
+
+/* ---------------------------- 按钮 ---------------------------- */
+
+.btn {
+    padding: 5px 20px;
+    border-radius:0;
+    margin-left: 5px;
+
+}
+
+.btn-group > .btn {
+    padding: 6px 12px;
+    background: none;
+    border: none;
+}
+.btn-group > .btn.btn-default.active {
+    background: none;
+    border: 1px #06D995 solid;
+    color: #06C683;
+}
+
+.btn-default {
+	background: #06d995;
+    border-color:transparent;
+    color: #fff;
+    border:1px solid #06d995;
+}
+.btn-danger:focus{background: #06d995;
+    border-color:transparent;
+    color: #fff;
+    border: 1px solid #06d995;}
+.btn-default.focus,.btn-default:focus,.btn-default:hover{
+	background: #00ad76;
+	color:#fff;
+	border: 1px solid #00ad76;
+	border-color:transparent;
+}
+.btn-default:active{
+	background: #00ad76;
+	color:#fff;
+	border: 0;
+
+}
+
+.btn-info,.btn-info:active,.btn-info:active:focus {
+    background: none;
+    border-color: #ddd;
+    color: #333;
+    /*float: right;*/
+}
+
+.btn-info:focus,.btn-info.focus,.btn-info:hover,.btn-info.hover {
+    background: #00ad76;
+    border-color: transparent;
+}
+#more {
+    width: 100%;
+}
+
+.radio {padding-right: 5px;}
+.btn-primary{background: #06d995;border: 0;}
+.btn-primary:hover{background: #01ab74; border: 0;}
+.col-md-2 .pull-right,.calendar-tools .pull-right {margin-top:15px;}
+.calendar-tools-button{float: right;}
+/* ---------------------------- 列表 ---------------------------- */
+.list-group-item
+{
+	border: 0;
+	background: none;
+}
+.list-group-item{
+	padding-left: 30px;
+}
+
+.list-group-background {
+	background: #f8fafb;
+	padding: 0 !important;
+	height:100%;
+}
+/* ---------------------------- 图标 ---------------------------- */
+a{
+	/*color:#333333;*/
+	font-size: 14px;
+}
+.nav-tabs{margin-top:10px;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	border: 0;
+	border-bottom:3px solid #06d995;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	color:#06d995;
+}
+h4{
+	margin-top:24px;
+	margin-bottom: 24px;
+	font-size: 20px;
+}
+.calendar-group{margin-bottom: 20px;}
+.bootstrap-table .table{border: 0;}
+.container-fluid{padding: 0; margin: 0;height: 100%;}
+.modal-header{padding: 8px;border-radius: 0;background: #f2f2f2}
+.modal-header h4{font-size: 14px; }
+.modal-content{border-radius: 0;}.modal-footer{border: 0;}
+.modal-dialog{width: 500px;}
+.modal .col-sm-2{background: none;border:0;}
+.container-fluid .calendar-bottom{overflow: hidden;}
+.nav-sidebar{padding-left: 20px;}
+.nav-pills>li>a{border-radius: 0;}
+.container-auto{height: auto;}
+.list-group-item:first-child{background: none;border-radius: 0;}
+.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus{background: #06d995;border-radius: 0;border:0; border-color:transparent; }
+.vertical-row{margin: 15px !important;}
+.btn-danger.active.focus,.btn-danger.active:focus,.btn-danger.active:hover,.btn-danger:active.focus,.btn-danger:active:focus,.btn-danger:active:hover,.open>.dropdown-toggle.btn-danger.focus,.open>.dropdown-toggle.btn-danger:focus,.open>.dropdown-toggle.btn-danger:hover{color:#fff;background-color: #06d995;border-color:transparent;}
+.btn-default.active.focus,.btn-default.active:focus,.btn-default.active:hover,.btn-default:active.focus,.btn-default:active:focus,.btn-default:active:hover,.open>.dropdown-toggle.btn-default.focus,.open>.dropdown-toggle.btn-default:focus,.open>.dropdown-toggle.btn-default:hover{color:#fff;background-color:#00ad76;border-color:transparent;}
+.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover {
+	background-color: #00ad76;
+	border-color: #00ad76;
+}
+.btn-primary.active.focus,.btn-primary.active:focus,.btn-primary.active:hover,.btn-primary:active.focus,.btn-primary:active:focus,.btn-primary:active:hover,.open>.dropdown-toggle.btn-primary.focus,.open>.dropdown-toggle.btn-primary:focus,.open>.dropdown-toggle.btn-primary:hover {
+	color: #fff;
+	background-color: #00ad76;
+	border-color: #00ad76;
+}
+.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: #00ad76;
+	border-color: #00ad76;
+}
+.btn-primary:hover {
+	color: #fff;
+	background-color: #00ad76;
+	border-color: #00ad76;
+}
+.btn-group >.smail-tab{
+    border: 1px solid #ddd;
+    color: #333; 
+    margin-right:15px;
+}
+.btn-group >.smail-tab:hover{
+    color:#fff;
+}
+.label-default{background-color:transparent;}
+.label-info{display: inline-block;padding: 5px 5px; margin-left: 10px; cursor: pointer; background: #06C683;
+    border: 1px #06D995 solid;}
+.label-info .label-default{color:#fff;}
+.fa .fa-times{color:#fff;}
+.calendar-group p{margin-top:10px;}
+.calendar-tools .calendar-tools-button{margin-bottom: 20px;}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    background: #06D995;    border:1px solid #06D995;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{color:#06D995;}
+.pagination>li>a, .pagination>li>span{color:#06D995;}
+.select2-container .select2-choice{border: none;border-radius: 0;}
+.select2-container .select2-choice .select2-arrow{border-radius: 0;}
+.dropdown-menu.datepicker{min-width: 300px;}
+.fa-plus{font-size: 20px; color:#06D995;}
+.border-exception span{border: 1px solid  #E74C3C; padding:3px;}
+.background-exception span{background: #E74C3C; color:#fff; padding: 3px; }
+.background-absence span{background: #F1C40F; color:#fff; padding: 3px; }
+
+/* Bootstrap table 组件 分页样式 */
+.btn.btn-default.dropdown-toggle{
+    color: #000000;
+}
+
+/* treeview */
+.node-selected{
+    background-color:#06D995 !important;
+}
+
+/* Colock 组件 */
+.popover{
+    z-index: 100000;
+}
+
+/* DateRange组件 */
+.daterangepicker_input>input{
+    width: 100% !important;
+}
+
+/* 标签样式 */
+.label.label-info.active{
+    background: none;
+    color: #000000;
+}
+.treeview .list-group-item{
+    display: table-caption;
+    white-space:nowrap;
+}
