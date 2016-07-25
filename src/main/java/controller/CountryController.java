@@ -21,7 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/myTestSpring")
 public class CountryController {
-    int a = 0;
+    String test = new String("test");
 
     @Autowired
     private  CountryService countryService;
